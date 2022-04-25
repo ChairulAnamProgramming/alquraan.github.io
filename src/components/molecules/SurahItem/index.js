@@ -36,7 +36,7 @@ const SurahItem = ({ data }) => {
             to={`/SurahDetail/${data.nomor}`}
             className="btn btn-green rounded py-3"
           >
-            <i class="fa-solid fa-book-quran fa-fw"></i>
+            <i class="fa-brands fa-readme fa-fw"></i>
             Baca Surah
           </Link>
         </div>

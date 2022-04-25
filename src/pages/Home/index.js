@@ -6,7 +6,7 @@ const Home = () => {
     <div className="container mt-5">
       <Search />
       <SurahList />
-      <BottomNav />
+      <BottomNav isActive="quran" />
     </div>
   );
 };

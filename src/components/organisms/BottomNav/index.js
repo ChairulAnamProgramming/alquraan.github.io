@@ -1,15 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Menu from "./Menu";
 
-const BottomNav = () => {
+const BottomNav = ({ isActive }) => {
   return (
     <nav className="nav fixed-bottom justify-content-center bg-dark">
-      <Link to="/" className="text-decoration-none">
-        <a className="nav-link text-white text-center  ">
-          <i class="fa-solid fa-book-quran fa-fw"></i>
-          <small className="d-block">AL-QUR'AN</small>
-        </a>
-      </Link>
+      <Menu
+        href="/"
+        title="AL-QUR'AN"
+        isActive={isActive == "quran" ? true : false}
+        icon={<i class="fa-solid fa-book-quran fa-fw"></i>}
+      />
+      <Menu
+        href="/jadwal-sholat"
+        title="JADWAL SHOLAT"
+        isActive={isActive == "jadwal" ? true : false}
+        icon={<i class="fa-solid fa-clock fa-fw"></i>}
+      />
     </nav>
   );
 };
