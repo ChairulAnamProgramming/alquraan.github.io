@@ -1,4 +1,17 @@
+.rounded {
+  border-radius: 10px !important;
+}
+
 nav .active {
   color: rgb(32, 167, 77) !important;
   font-weight: bold;
+}
+
+.btn-green {
+  background-color: rgb(32, 167, 77) !important;
+  color: white;
+}
+
+.bg-gray {
+  background-color: rgb(241, 241, 241);
 }

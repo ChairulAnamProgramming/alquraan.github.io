@@ -1,18 +1,19 @@
 import React from "react";
 import { ConvertToArabicNumber } from "../../../utils";
-
+import "./AyatItem.css";
 const AyatItem = ({ item }) => {
   return (
-    <li className="list-group-item text-end">
-      <div>
-        <span className="ms-4">{ConvertToArabicNumber(item.nomor)}.</span>
+    <li className="list-group-item d-flex justify-content-end">
+      <div className="text-end">
         <span>{item.ar}</span>
+        <small
+          className="d-block"
+          dangerouslySetInnerHTML={{
+            __html: `<strong>Artinya</strong> : <i>${item.id}</i>`,
+          }}
+        />
       </div>
-      <small
-        dangerouslySetInnerHTML={{
-          __html: `<strong>Artinya</strong> : <i>${item.id}</i>`,
-        }}
-      />
+      <span className="nomor ms-2">.{ConvertToArabicNumber(item.nomor)}</span>
     </li>
   );
 };
